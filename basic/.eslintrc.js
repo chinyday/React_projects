@@ -8,7 +8,7 @@ export default {
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
   ],
   "overrides": [
   ],
@@ -21,5 +21,5 @@ export default {
   ],
   "rules": {
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
 }
