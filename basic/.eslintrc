@@ -28,11 +28,10 @@
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    // "prettier/prettier": ["error", { "singleQuote": true }],
     "prettier/prettier": "warn",
     "@typescript-eslint/no-var-requires": "error",
     "semi": "warn",
-    "react/jsx-filename-extension": [0, { "extensions": ["js", "jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "arrow-parens": "off",
     "no-console": "warn",
     "import/prefer-default-export": "off",
@@ -41,7 +40,7 @@
     "react/prop-types": "off",
     "no-underscore-dangle": "warn",
     "no-empty-function": "off",
-    "@typescript-eslint/no-empty-function": "warn"
+    "@typescript-eslint/no-empty-function": "warn",
+    "react/react-in-jsx-scope": "off"
   }
-  // "parser": "@babel/eslint-parser",
 }
