@@ -7,12 +7,14 @@ export default {
     "node": true
   },
   "extends": [
+    "react-app",
     "eslint:recommended",
     "plugin:react/recommended",
   ],
   "overrides": [
   ],
   "parserOptions": {
+    "requireConfigFile": false,
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
@@ -20,6 +22,7 @@ export default {
     "react"
   ],
   "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }]
   },
   "parser": "@babel/eslint-parser",
 }
