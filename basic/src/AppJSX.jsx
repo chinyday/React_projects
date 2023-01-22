@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-function App() {
+function AppJSX() {
   const name = "chinyday";
   const milks = ["초코", "딸기", "바나나", "커피"];
 
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppJSX;
