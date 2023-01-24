@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 
 function Product() {
   const [products, setProduct] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   /*
   
@@ -15,7 +19,7 @@ function Product() {
   */
 
   useEffect(() => {
-    fetch("data/products.json")
+    fetch(`data/${checked ? "sale_" : ""}products.json`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
@@ -24,10 +28,20 @@ function Product() {
       console.log("cleanup");
       // 컴포넌트가 언마운트될 때, 메모리 혹은 네트워크를 깨끗하게 정리
     };
-  }, []);
+  }, [checked]);
 
   return (
     <>
+      <div>
+        <input
+          id="checkbox"
+          type="checkbox"
+          value={checked}
+          onChange={handleChange}
+        />
+        <label htmlFor="checkbox">Show sale products!!</label>
+      </div>
+
       <ul>
         {products.map((item, index) => (
           <li key={index}>

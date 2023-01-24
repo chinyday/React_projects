@@ -4,6 +4,7 @@ import Product from "./components/Product";
 
 function AppProduct() {
   const [showProduct, setShowProduct] = useState(true);
+
   return (
     <>
       <button onClick={() => setShowProduct((prev) => !prev)}>
