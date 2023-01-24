@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-// import Avartar from "./components/Avartar";
-import Profile from "./components/Profile";
+import Profile from "./basic/components/Profile";
 
 function AppProfile() {
   return (

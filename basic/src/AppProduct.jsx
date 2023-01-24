@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Product from "./components/Product";
+import Product from "./basic/components/Product";
 
 function AppProduct() {
   const [showProduct, setShowProduct] = useState(true);

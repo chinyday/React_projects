@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Count from "./components/Count";
+import Count from "./basic/components/Count";
 
 function AppCount() {
   const [count, setCount] = useState(0);
