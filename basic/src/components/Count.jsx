@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 
-function Count() {
+function Count({ total, onClick }) {
   const [count, setCount] = useState(0);
   const addCount = () => {
     setCount((prev) => prev + 1);
+    onClick();
   };
 
   return (
     <>
       <div className="container">
         <div className="count">
-          <span className="number">{count}</span>
+          <p className="number">
+            {count} <span className="total">/{total}</span>
+          </p>
           <button className="btn" onClick={addCount}>
-            add
+            add +
           </button>
         </div>
       </div>
