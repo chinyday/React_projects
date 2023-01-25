@@ -6,12 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 // import AppCount from "./AppCount";
 // import AppProduct from "./AppProduct";
 // import AppXY from "./AppXY";
-import AppMentors from "./AppMentors";
+import AppReducer from "./AppReducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppMentors />
+    <AppReducer />
   </React.StrictMode>
 );
 

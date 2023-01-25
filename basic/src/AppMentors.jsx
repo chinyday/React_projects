@@ -16,13 +16,6 @@ function AppMentors() {
     ],
   });
 
-  /*
-  
-  리액트의 State는 불변성을 유지해야 한다.
-  전체적인 객체를 새롭게 만들어서 새롭게 참조값을 만들어줘야한다
-
-  */
-
   const handleUpdataMentorName = () => {
     let prev = window.prompt("누구의 이름을 바꾸고 싶으신가요?");
     let curr = window.prompt("무엇으로 바꾸고 싶으신가요?");
