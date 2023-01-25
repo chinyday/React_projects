@@ -5,12 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 // import AppProfile from "./AppProfile";
 // import AppCount from "./AppCount";
 // import AppProduct from "./AppProduct";
-import AppXY from "./AppXY";
+// import AppXY from "./AppXY";
+import AppMentor from "./AppMentor";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppXY />
+    <AppMentor />
   </React.StrictMode>
 );
 
