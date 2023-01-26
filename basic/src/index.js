@@ -6,12 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 // import AppCount from "./AppCount";
 // import AppProduct from "./AppProduct";
 // import AppXY from "./AppXY";
-import AppReducer from "./AppReducer";
+// import AppReducer from "./AppReducer";
+import AppForm from "./AppForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppReducer />
+    <AppForm />
   </React.StrictMode>
 );
 
