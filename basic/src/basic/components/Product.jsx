@@ -8,6 +8,9 @@ function Product() {
     setChecked((prev) => !prev);
   };
 
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(undefined);
+
   /*
   
   useEffect ?
@@ -20,16 +23,23 @@ function Product() {
   */
 
   useEffect(() => {
+    setLoading(true);
+    setError(undefined);
     fetch(`data/${checked ? "sale_" : ""}products.json`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);
-      });
+      })
+      .catch((e) => setError("에러발생"))
+      .finally(() => setLoading(false));
     return () => {
       console.log("cleanup");
       // 컴포넌트가 언마운트될 때, 메모리 혹은 네트워크를 깨끗하게 정리
     };
   }, [checked]);
+
+  if (loading) return <>로딩중</>;
+  if (error) return <>{error}</>;
 
   return (
     <>

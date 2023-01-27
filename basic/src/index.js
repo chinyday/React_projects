@@ -4,15 +4,15 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // import AppProfile from "./AppProfile";
 // import AppCount from "./AppCount";
-// import AppProduct from "./AppProduct";
+import AppProduct from "./AppProduct";
 // import AppXY from "./AppXY";
 // import AppReducer from "./AppReducer";
-import AppWrap from "./AppWrap";
+// import AppMentors from "./AppMentors";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppWrap />
+    <AppProduct />
   </React.StrictMode>
 );
 
