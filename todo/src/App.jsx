@@ -16,8 +16,7 @@ function App() {
     7. 로컬 저장
 
   */
-  const arr = ['장보기', '공부하기'];
-
+ 
   return (
     <div>
       <h1>todo</h1>
