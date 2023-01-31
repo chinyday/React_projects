@@ -3,7 +3,7 @@ import { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
 
-function TodoList() {
+function TodoList({filter}) {
 
 	const [list, setList] = useState([
 		{id:1, text:"장보기", status:"active"},
@@ -23,15 +23,23 @@ function TodoList() {
 		setList(list.filter(todo => todo.id !== item.id));
 	}
 
+	// status에 따른 노출 변경
+	const filtered = getFilterdList(list, filter);
+
+	function getFilterdList(list, filter) {
+		if(filter === 'all') return list;
+		return list.filter((itme) => itme.status === filter);
+	}
+
   return (
-		<div>
+		<>
 		 	<ul>
-				{list.map((item) => (
+				{filtered.map((item) => (
 					<Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
 				))}
 			</ul>
 			<AddTodo onAdd={handleAdd} />
-		</div>
+		</>
   );
 }
 export default TodoList;

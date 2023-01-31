@@ -1,27 +1,18 @@
+import {useState} from 'react';
 import './App.css';
+import Header from './components/Header/Header';
 import TodoList from './components/TodoList/TodoList'
 
+const filters = ['all', 'active', 'completed'];
+
 function App() {
+  const [filter, setFilter] = useState(filters[0]);
 
-  /*
-  
-  - 투두앱 만들기 
-  
-    1. 전체 할일 리스트 출력
-    2. 할일 삭제 
-    3. 할일 추가
-    4. 할일 체크박스 (완료료 변경)
-    5. 필터링 (전체, 완료, 진행중)
-    6. 다크모드 
-    7. 로컬 저장
-
-  */
- 
-  return (
-    <div>
-      <h1>todo</h1>
-      <TodoList />
-    </div>
+  return ( 
+    <>
+      <Header filters={filters} filter={filter} onFilterChange={setFilter} />
+      <TodoList filter={filter} />
+    </>
   );
 }
 export default App;
