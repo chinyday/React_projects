@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
+import styles from "./TodoList.module.css"
 
 function TodoList({filter}) {
 
@@ -32,14 +33,14 @@ function TodoList({filter}) {
 	}
 
   return (
-		<>
-		 	<ul>
+		<section className={styles.container}>
+		 	<ul className={styles.list}>
 				{filtered.map((item) => (
 					<Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete} />
 				))}
 			</ul>
 			<AddTodo onAdd={handleAdd} />
-		</>
+		</section>
   );
 }
 export default TodoList;

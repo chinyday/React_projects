@@ -1,9 +1,14 @@
 :root {
-  --color-bg-dark: rgb(226, 226, 226);
+  --color-bg-dark: rgb(243, 243, 243);
   --color-bg: rgb(255, 255, 255);
   --color-gray: rgb(196, 196, 196);
   --color-text: rgb(92, 92, 92);
   --color-accent: rgb(255, 76, 76);
+  --color-white: #fff;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 body {
@@ -13,6 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
   width: 100vw;
   height: 100vh;
   display: flex;
