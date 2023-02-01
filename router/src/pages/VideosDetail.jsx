@@ -10,3 +10,6 @@ export default function VideosDetail(){
     </div>
   );
 }
+
+
+// useParams  객체에 어떤  Param이 있는지 전달 해줌
