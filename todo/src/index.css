@@ -5,6 +5,7 @@
   --color-text: rgb(92, 92, 92);
   --color-accent: rgb(255, 76, 76);
   --color-white: #fff;
+  --color-scrollbar: #aaa7a7;
 }
 
 *{
@@ -26,6 +27,7 @@ body {
   align-items: center;
   background: rgb(125,57,181);
   background: linear-gradient(148deg, rgb(133 126 139) 0%, rgb(142 66 150 / 97%) 43%, rgb(18 5 21 / 82%) 100%);
+  accent-color: var(--color-accent);
 }
 
 code {
@@ -52,4 +54,18 @@ ul{
 button{
   outline: none;
   border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--color-scrollbar);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--color-accent);
 }
