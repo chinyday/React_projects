@@ -5,6 +5,18 @@
   background-color: var(--color-bg-dark);
   border-bottom: 1px solid var(--color-gray);
 }
+.icon{
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--color-text);
+  margin-left: 0.5rem;
+  transition: all 115ms ease-out;
+}
+.icon:hover{
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
 .filters{
   display: flex;
 }
